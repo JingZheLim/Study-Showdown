@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #2c3e50, #3498db);
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.player-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.player-stat {
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.health-bar {
+    width: 200px;
+    height: 20px;
+    background: #e74c3c;
+    margin-left: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.health-bar-inner {
+    height: 100%;
+    background: #2ecc71;
+    width: 100%;
+    transition: width 0.5s ease;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.avatar {
+    width: 300px;
+    height: 400px;
+    background: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10px;
+    position: relative;
+}
+
+.avatar-head {
+    width: 80px;
+    height: 80px;
+    background: #34495e;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.avatar-body {
+    height: 200px;
+    background: #2980b9;
+    border-radius: 0 0 10px 10px;
+}
+
+.timer {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #ecf0f1;
+}
+
+.question {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.answer-choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.answer-btn {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.answer-btn:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.05);
+}

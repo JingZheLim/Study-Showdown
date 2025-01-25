@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Showdown Battle</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+        .avatar {
+            width: 300px;
+            height: 400px;
+            background: none;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+        }
+        .avatar img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .health-bar-inner {
+            height: 20px;
+            background-color: green;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="player-stats">
+            <div class="player-stat">
+                <span id="player1-name">Player 1</span>
+                <div class="health-bar">
+                    <div id="player1-health" class="health-bar-inner" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="player-stat">
+                <div class="health-bar">
+                    <div id="player2-health" class="health-bar-inner" style="width: 100%;"></div>
+                </div>
+                <span id="player2-name">Player 2</span>
+            </div>
+        </div>
+
+        <div class="question" id="game-question">
+            Waiting for game to start...
+        </div>
+
+        <div class="avatar-container">
+            <div class="avatar">
+                <img src="figure1.png" alt="Player 1 Avatar">
+            </div>
+            <div class="avatar">
+                <img src="figure2.png" alt="Player 2 Avatar">
+            </div>
+        </div>
+
+        <div class="answer-choices">
+            <button id = "btn1" class="answer-btn">-</button>
+            <button id = "btn2" class="answer-btn">-</button>
+            <button id = "btn3" class="answer-btn">-</button>
+            <button id = "btn4" class="answer-btn">-</button>
+        </div>
+
+        <div id="game-log" class="game-log"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

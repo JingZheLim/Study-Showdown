@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Showdown</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Study Showdown</h1>
+    </div>
+    <div class="game-controls">
+      <button id="play-btn" class="play-btn">Play</button>
+      <div id="status-indicator" class="status-indicator">Idle</div>
+    </div>
+
+    <div class="waiting-room">
+      <div id="player-status">
+        <p id="player1-status">Player 1: Waiting...</p>
+        <p id="player2-status">Player 2: Waiting...</p>
+      </div>
+    </div>
+    <audio id="background-music" autoplay loop>
+      <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
